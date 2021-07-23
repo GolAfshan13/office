@@ -1,0 +1,23 @@
+<header [ngClass]="bgColor">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <span class="nav-link text-dark" [class.active]="headerViewMode == 'register' " (click)="viewMode('register')" >register</span>
+    </li>
+    <li class="nav-item">
+      <span class="nav-link text-dark" [class.active]="headerViewMode == 'login' " (click)="viewMode('login') "  >login</span>
+    </li>
+    <li class="nav-item">
+      <span class="nav-link text-dark" [class.active]="headerViewMode == 'logout' " (click)="viewMode('logout') "  >logout</span>
+    </li>
+  </ul>
+
+</header>
+
+<!-- <div [ngSwitch]="viewMode">
+  
+  <app-login *ngSwitchCase="'login'"></app-login>
+
+  <div *ngSwitchCase="'logout'">logout</div>
+  <div *ngSwitchCase="'register'">register</div>
+  <div *ngSwitchDefault>register</div>
+</div> -->

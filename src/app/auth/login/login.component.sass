@@ -1,0 +1,38 @@
+@import "../styles/_colors"
+@import "../styles/_mixins"
+
+.container-fluid  
+  .card 
+    @include formStyle($formHeight: 500px)
+    
+    .header__icon
+      @include headerIcon()
+      
+      
+    .welcome
+      margin-top: 5px
+      color: $loginTextColor
+  
+    .email__label
+      margin-bottom: -2px
+    
+    .card-body
+    
+      label
+        color: $loginTextColor
+
+      input
+        @include inputsStyles()
+    
+      .btn
+        @include btnStyle()
+        
+    
+      
+  
+
+  
+
+  
+
+

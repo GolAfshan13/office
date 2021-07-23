@@ -1,0 +1,42 @@
+@import "../styles/_colors"
+@import "../styles/_mixins"
+
+.container-fluid  
+
+  .wrongReg
+    border-color: $error
+
+  .card 
+    @include formStyle(550px)
+    
+    .header__icon
+      @include headerIcon()
+      
+
+    .welcome
+      margin-top: 5px
+      color: $registerTextColor
+  
+    .email__label
+      margin-bottom: -2px
+    
+    .card-body
+    
+      label
+        color: $registerTextColor
+
+      input
+        @include inputsStyles()
+        
+      .btn
+        @include btnStyle()
+        background-color: $btnColor
+    
+      
+  
+
+  
+
+  
+
+

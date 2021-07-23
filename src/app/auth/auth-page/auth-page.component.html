@@ -1,0 +1,18 @@
+<app-header-auth></app-header-auth>
+<div class="container-fluid">
+  <div class="pages">
+    
+    <div [ngSwitch]="viewMode">
+      
+      <app-login *ngSwitchCase="'login'"></app-login>
+    
+      <div *ngSwitchCase="'logout'">logout</div>
+      <app-register *ngSwitchCase="'register'"></app-register>
+      <app-register *ngSwitchDefault></app-register>
+    </div>
+    
+  </div>
+  
+  <app-office-picture class="pic"> </app-office-picture>
+
+</div>

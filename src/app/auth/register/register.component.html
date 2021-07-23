@@ -1,0 +1,36 @@
+<div class="container-fluid d-flex flex-row justify-content-center mt-5">
+
+  <form class="card d-flex flex-column " [class.wrongReg]="isRegistrationInvalid" (submit)="addNewUser(username, email, password)" [formGroup]="form">
+    <div class="header d-flex flex-column align-items-center mt-4">
+      <img src="../../../assets/icons/person-circle.svg" class="header__icon" alt="person">
+      <div class="welcome">Welcome To Our Website</div>
+    </div>
+
+    <div class="card-body d-flex flex-column align-items-center justify-content-evenly">
+
+      <div class="account-name d-flex flex-column">
+        <label for="account-name" class="account-name__label">User Name</label>
+        <input type="account-name" class="account-name__input" name="account-name" id="account-name" formControlName="username" placeholder="User Name">
+        <div *ngIf="username?.touched && username?.invalid" class="alert alert-danger"> user name is invalid</div>
+      </div>
+
+      <div class="email d-flex flex-column">
+        <label for="email" class="email__label" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover" >E-mail</label>
+        <input type="email" class="email__input" name="email" id="email" placeholder="me@mail.com" formControlName="email">
+        <div *ngIf="email?.touched && email?.invalid" class="alert alert-danger"> email is invalid</div>
+      </div>
+
+      <div class="password d-flex flex-column">
+        <label for="password" class="password__label" >PassWord</label>
+        <input type="password" class="password_input" name="password" id="password" placeholder="Your Password" formControlName="password">
+        <div *ngIf="password?.touched && password?.invalid" class="alert alert-danger">
+          <div *ngIf="password?.errors?.minlength || password?.errors?.maxlength"> 4 to 10 character</div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn px-5">REGISTER  </button>
+    </div>
+
+  </form>
+  <script src="node_modules\bootstrap\js\dist\popover.js"></script>
+</div>

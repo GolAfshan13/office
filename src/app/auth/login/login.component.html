@@ -1,0 +1,25 @@
+<div class="container-fluid d-flex flex-row justify-content-center mt-5">
+
+  <form class="card d-flex flex-column " (submit)="checkUsers(email, password)" [formGroup]="form">
+    <div class="header d-flex flex-column align-items-center mt-4">
+      <img src="../../../assets/icons/person-circle.svg" class="header__icon" alt="person">
+      <div class="welcome">Welcome Back</div>
+    </div>
+
+    <div class="card-body d-flex flex-column align-items-center justify-content-evenly">
+
+      <div class="email d-flex flex-column">
+        <label for="email" class="email__label">E-mail</label>
+        <input type="email" class="email__input" name="email" id="email" placeholder="me@mail.com" formControlName="email">
+      </div>
+
+      <div class="password d-flex flex-column">
+        <label for="password" class="password__label" >PassWord</label>
+        <input type="password" class="password_input" name="password" id="password" placeholder="Your Password" formControlName="password">
+      </div>
+
+      <button type="submit" class="btn btn-success px-5">Log In </button>
+    </div>
+
+  </form>
+</div>
